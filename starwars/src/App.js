@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'; // imported usestate and use effect
 import './App.css';
+import axios from "axios" //imported axios
+import Character from "./Character"
+import styled from "styled-components"
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
