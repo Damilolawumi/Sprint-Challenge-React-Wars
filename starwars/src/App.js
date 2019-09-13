@@ -12,10 +12,11 @@ flex-wrap: wrap;
 
 const App = () => {
   //setup the component data
-  const [starWarsInfo, setStarWarsInfo] = useState([])
+  const [starWarsInfo, setStarWarsInfo] = useState([]) //set the initial value to an arrasy
 
   useEffect(() => {
     axios.get('https://swapi.co/api/people/')
+    // call the api inside usestate
       .then(response => {
         console.log(response)
 
@@ -36,7 +37,7 @@ const App = () => {
 
       <StyledSection>
         {/* created a section tag to hold the result of the mapped function inorder to flex the container */}
-        {starWarsInfo.map((person, index) => {
+              {starWarsInfo.map((person, index) => {
           return <Character key={index} character={person} />
         })}
       </StyledSection>

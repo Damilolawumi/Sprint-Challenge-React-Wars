@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const StyledDiv = styled.div`
 margin: 20px;
+width:400px;
 box-shadow: 2px 2px 4px 2px;
 `;
 
