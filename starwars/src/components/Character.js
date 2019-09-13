@@ -2,17 +2,20 @@ import React from "react";
 import styled from "styled-components"
 
 const StyledDiv = styled.div`
-margin:10px;
-margin: 30px;
-    border: 1px solid grey;
+margin: 20px;
+box-shadow: 2px 2px 4px 2px;
 `;
 
 const StyledH1 = styled.h1`
-
+display: block;
+    margin: 26px;
 `;
 
 const StyledParagraph = styled.p`
-
+    color: #110e0e;
+    font-family: initial;
+    font-size: 24px;
+    font-weight: bold;
 `;
 
 function Character(props) {
