@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react'; // imported usestate and use effect
 import './App.css';
 import axios from "axios" //imported axios
-import Character from "./Character"
+import Character from "./components/Character"
 import styled from "styled-components"
 
 
-// const StyledSection = styled.section`
-// display:flex;
-// `;
+const StyledSection = styled.section`
+display:flex;
+`;
 
 const App = () => {
   //setup the component data
   const [starWarsInfo, setStarWarsInfo] = useState([])
-
 
   useEffect(() => {
     axios.get('https://swapi.co/api/people/')
@@ -34,12 +33,12 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
 
-      <section>
+      <StyledSection>
         {/* created a section tag to hold the result of the mapped function inorder to flex the container */}
         {starWarsInfo.map((person, index) => {
           return <Character key={index} character={person} />
         })}
-      </section>
+      </StyledSection>
 
     </div>
   );
